@@ -5,7 +5,7 @@ import { updateDesiredRent } from '../../ducks/reducer';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-export default class WizardFour extends Component {
+class WizardFour extends Component {
     render() {
         const { updateDesiredRent } = this.props;
 
@@ -37,13 +37,24 @@ export default class WizardFour extends Component {
                 </div>
                 <div className="step_body-Container">
                     <div>
-                        <span></span>
-                        <input/>
+                        <span>Desired Rent</span>
+                        <input type="text" onChange={ (e)=> this.props.updateDesiredRent(e.target.value) }/>
                     </div>
-                    <Link to="/dashboard"><button className="next-step_btn">Finish Listing</button></Link>
+                    <Link to="/dashboard">
+                        <button className="next-step_btn">Finish Listing</button>
+                    </Link>
                 </div>
             </div>
         </div>
         )
     }
-};
+}
+
+function mapStateToProps(state) {
+    const { desiredRent } = state;
+    return {
+        desiredRent
+    };
+}
+
+export default connect(mapStateToProps, { updateDesiredRent })(WizardFour); 

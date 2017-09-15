@@ -6,7 +6,7 @@ import { updateStreet, updateCity, updateState, updateZip } from '../../ducks/re
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-export default class WizardTwo extends Component {
+class WizardTwo extends Component {
     render() {
         const { updateStreet, updateCity, updateState, updateZip } = this.props;
 
@@ -39,18 +39,32 @@ export default class WizardTwo extends Component {
                 <div className="step_body-Container">
                     <div className="step2_input-container">
                         <span className="" >Address</span>
-                        <input/>
+                        <input type="text" onChange={ (e)=> this.props.updateAddress(e.target.value) }/>
                         <span className="">City</span>
-                        <input/>
+                        <input type="text" onChange={ (e)=> this.props.updateCity(e.target.value) }/>
                         <span className="">State</span>
-                        <input/>
+                        <input type="text" onChange={ (e)=> this.props.updateState(e.target.value) }/>
                         <span className="">Zip</span>
-                        <input/>
+                        <input type="text" onChange={ (e)=> this.props.updateZip(e.target.value) }/>
                     </div>
-                    <Link to="/wizard/3"><button className="next-step_btn"> Next </button></Link>
+                    <Link to="/wizard/3">
+                        <button className="next-step_btn"> Next</button>
+                    </Link>
                 </div>
             </div>
         </div>
         )
     };
 };
+
+function mapStateToProps(state) {
+    const { street, city, USstate, zip } = state;
+    return {
+        street,
+        city,
+        USstate,
+        zip
+    };
+}
+
+export default connect(mapStateToProps, { updateStreet, updateCity, updateState, updateZip })(WizardTwo); 

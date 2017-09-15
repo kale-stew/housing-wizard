@@ -6,7 +6,7 @@ import { updateLoanAmount, updateMonthlyMort } from '../../ducks/reducer';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-export default class WizardThree extends Component {
+class WizardThree extends Component {
     render() {
         const { updateLoanAmount, updateMonthlyMort } = this.props;
 
@@ -38,17 +38,29 @@ export default class WizardThree extends Component {
                 </div>
                 <div className="step_body-Container">
                     <div>
-                        <span></span>
-                        <input/>
+                        <span>Loan Amount</span>
+                        <input type="text" onChange={ (e)=> this.props.updateLoanAmount(e.target.value) }/>
                     </div>
                     <div>
-                        <span></span>
-                        <input/>
+                        <span>Monthly Mortgage</span>
+                        <input type="text" onChange={ (e)=> this.props.updateMonthlyMort(e.target.value) }/>
                     </div>
-                    <Link to="/wizard/4"><button className="next-step_btn"> Next </button></Link>
+                    <Link to="/wizard/4">
+                        <button className="next-step_btn"> Next</button>
+                    </Link>
                 </div>
             </div>
         </div>
         )
     }
 };
+
+function mapStateToProps(state) {
+    const { loanAmount, monthlyMort } = state;
+    return {
+        loanAmount,
+        monthlyMort
+    };
+}
+
+export default connect(mapStateToProps, { updateLoanAmount, updateMonthlyMort })(WizardThree); 

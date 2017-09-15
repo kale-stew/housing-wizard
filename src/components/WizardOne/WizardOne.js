@@ -5,8 +5,9 @@ import { updatePropName, updateDescription } from '../../ducks/reducer';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-export default class WizardOne extends Component {
+class WizardOne extends Component {
     render() {
+        console.log(this)
         const { updatePropName, updateDescription } = this.props;
 
         return(
@@ -38,16 +39,28 @@ export default class WizardOne extends Component {
                     <div className="step_body-Container">
                         <div className="step1_name-container">
                             <span>Property Name</span>
-                            <input/>
+                            <input type="text" onChange={ (e)=> this.props.updatePropName(e.target.value) }/>
                         </div>
                         <div className="step1_descrip-container">
                             <span>Description</span>
-                            <textarea></textarea>
+                            <textarea type="text" onChange={ (e)=> this.props.updateDescription(e.target.value) }></textarea>
                         </div>
-                        <Link to="/wizard/2"><button className="next-step_btn"> Next </button></Link>
+                        <Link to="/wizard/2">
+                            <button className="next-step_btn"> Next</button>
+                        </Link>
                     </div>
                 </div>
             </div>
         );
     };
 }
+
+function mapStateToProps(state) {
+    const { propName, description } = state;
+    return {
+        propName,
+        description
+    };
+}
+
+export default connect(mapStateToProps, { updatePropName, updateDescription })(WizardOne); 

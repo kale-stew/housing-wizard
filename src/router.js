@@ -10,8 +10,8 @@ import Landing from './components/Landing/Landing';
 export default (
     <HashRouter>
         <div>
-            <Route component={Landing} path exact='/'/>
-            <Route component={Dashboard} path exact='/welcome'/>
+            <Route component={Landing} exact path='/'/>
+            <Route component={Dashboard} path='/welcome'/>
             <Route component={WizardOne} path='/wizard/1'/>
             <Route component={WizardTwo} path='/wizard/2'/>
             <Route component={WizardThree} path='/wizard/3'/>
