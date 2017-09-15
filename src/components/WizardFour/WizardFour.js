@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { updateDesiredRent } from '../../ducks/reducer';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import '../wizards.css';
 
 class WizardFour extends Component {
     render() {

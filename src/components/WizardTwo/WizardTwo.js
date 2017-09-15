@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import { updateStreet, updateCity, updateState, updateZip } from '../../ducks/reducer';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import '../wizards.css';
 
 class WizardTwo extends Component {
     render() {
