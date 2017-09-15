@@ -1,9 +1,14 @@
 // desired rent paid by a tenant
 
 import React, { Component } from 'react';
+import { updateDesiredRent } from '../../ducks/reducer';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 export default class WizardFour extends Component {
     render() {
+        const { updateDesiredRent } = this.props;
+
         return(
             <div className="wizard_container">
             <div className="header_container">
@@ -35,7 +40,7 @@ export default class WizardFour extends Component {
                         <span></span>
                         <input/>
                     </div>
-                    <button className="next_btn">Finish Listing</button>
+                    <Link to="/dashboard"><button className="next-step_btn">Finish Listing</button></Link>
                 </div>
             </div>
         </div>

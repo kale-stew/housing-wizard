@@ -2,9 +2,14 @@
 // monthly mortgage being paid 
 
 import React, { Component } from 'react';
+import { updateLoanAmount, updateMonthlyMort } from '../../ducks/reducer';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 export default class WizardThree extends Component {
     render() {
+        const { updateLoanAmount, updateMonthlyMort } = this.props;
+
         return(
             <div className="wizard_container">
             <div className="header_container">
@@ -40,7 +45,7 @@ export default class WizardThree extends Component {
                         <span></span>
                         <input/>
                     </div>
-                    <button className="next_btn">Next Step</button>
+                    <Link to="/wizard/4"><button className="next-step_btn"> Next </button></Link>
                 </div>
             </div>
         </div>

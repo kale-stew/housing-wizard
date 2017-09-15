@@ -1,11 +1,13 @@
 // input for name, description
 
 import React, { Component } from 'react';
-import { updateName, updateDescription } from '../../ducks/reducer';
+import { updatePropName, updateDescription } from '../../ducks/reducer';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 export default class WizardOne extends Component {
     render() {
-        const { updateName, updateDescription } = this.props;
+        const { updatePropName, updateDescription } = this.props;
 
         return(
             <div className="wizard_container">
@@ -34,15 +36,15 @@ export default class WizardOne extends Component {
                         </div>
                     </div>
                     <div className="step_body-Container">
-                        <div>
-                            <span></span>
+                        <div className="step1_name-container">
+                            <span>Property Name</span>
                             <input/>
                         </div>
-                        <div>
-                            <span></span>
-                            <input/>
+                        <div className="step1_descrip-container">
+                            <span>Description</span>
+                            <textarea></textarea>
                         </div>
-                        <button className="next_btn">Next Step</button>
+                        <Link to="/wizard/2"><button className="next-step_btn"> Next </button></Link>
                     </div>
                 </div>
             </div>
