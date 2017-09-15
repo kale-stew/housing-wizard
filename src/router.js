@@ -3,17 +3,21 @@ import WizardOne from './components/WizardOne/WizardOne';
 import WizardTwo from './components/WizardTwo/WizardTwo';
 import WizardThree from './components/WizardThree/WizardThree';
 import WizardFour from './components/WizardFour/WizardFour';
-// import NextBtn from './components/NextBtn/NextBtn';
+import Dashboard from './components/Dashboard/Dashboard';
 import { HashRouter, Route } from 'react-router-dom';
+import Landing from './components/Landing/Landing';
 
 export default (
     <HashRouter>
         <div>
-            {/* <Route component={NextBtn} path exact='/'/> */}
-            <Route component={WizardOne} path='/wOne'/>
-            <Route component={WizardTwo} path='/wTwo'/>
-            <Route component={WizardThree} path='/wThree'/>
-            <Route component={WizardFour} path='/wFour'/>
+            <Route component={Landing} path exact='/'/>
+            <Route component={Dashboard} path exact='/welcome'/>
+            <Route component={WizardOne} path='/wizard/1'/>
+            <Route component={WizardTwo} path='/wizard/2'/>
+            <Route component={WizardThree} path='/wizard/3'/>
+            <Route component={WizardFour} path='/wizard/4'/>
         </div>
     </HashRouter>
 );
+
+// routing! added /paths/

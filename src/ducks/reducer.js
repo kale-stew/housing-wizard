@@ -1,5 +1,9 @@
+// this is tracking states
+// initiate state of every value being tracked
+// export functions that affect that change 
+
 const initialState = {
-    name: '',
+    propName: '',
     description: '',
     street: '',
     city: '',
@@ -10,7 +14,7 @@ const initialState = {
     desiredRent: 0
 };
 
-const UPDATE_NAME = 'UPDATE_NAME';
+const UPDATE_PROP_NAME = 'UPDATE_PROP_NAME';
 const UPDATE_DESCRIPTION = "UPDATE DESCRIPTION";
 const UPDATE_STREET = "UPDATE_STREET";
 const UPDATE_CITY = "UPDATE_CITY";
@@ -24,8 +28,8 @@ function reducer( state = initialState, action ) {
     console.log('REDUCER HIT: Action ->', action );
 
     switch (action.type) {
-        case UPDATE_NAME:
-          return Object.assign( {}, state, {name: action.payload} );
+        case UPDATE_PROP_NAME:
+          return Object.assign( {}, state, {propName: action.payload} );
 
         case UPDATE_DESCRIPTION:
           return Object.assign( {}, state, {description: action.payload} );
@@ -53,10 +57,10 @@ function reducer( state = initialState, action ) {
     }
 };
 
-export function updateName( name ) {
+export function updatePropName( propName ) {
     return {
-      type: UPDATE_NAME,
-      payload: name
+      type: UPDATE_PROP_NAME,
+      payload: propName
     };
 };
 
