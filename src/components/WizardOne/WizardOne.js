@@ -2,3 +2,6 @@
 
 import react, { Component } from 'react';
 
+export default class WizardOne extends Component {
+    
+}
