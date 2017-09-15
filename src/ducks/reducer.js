@@ -51,68 +51,68 @@ function reducer( state = initialState, action ) {
         case UPDATE_DESIRED_RENT:
           return Object.assign({}, state, {desiredRent: action.payload} );
     }
+};
 
-    export function updateName( name ) {
-        return {
-        type: UPDATE_NAME,
-        payload: name
-        };
+export function updateName( name ) {
+    return {
+      type: UPDATE_NAME,
+      payload: name
     };
+};
 
-    export function updateDescription( description ) {
-        return {
-        type: UPDATE_DESCRIPTION,
-        payload: description
-        };
+export function updateDescription( description ) {
+    return {
+      type: UPDATE_DESCRIPTION,
+      payload: description
     };
+};
 
-    export function updateStreet( street ) {
-        return {
-        type: UPDATE_STREET,
-        payload: street
-        };
+export function updateStreet( street ) {
+    return {
+      type: UPDATE_STREET,
+      payload: street
     };
+};
 
-    export function updateCity( city ) {
-        return {
-        type: UPDATE_CITY,
-        payload: city
-        };
+export function updateCity( city ) {
+    return {
+      type: UPDATE_CITY,
+      payload: city
     };
+};
 
-    export function updateState( state ) {
-        return {
-        type: UPDATE_STATE,
-        payload: state
-        };
+export function updateState( state ) {
+    return {
+      type: UPDATE_STATE,
+      payload: state
     };
+};
 
-    export function updateZip( zip ) {
-        return {
-        type: UPDATE_ZIP,
-        payload: zip
-        };
+export function updateZip( zip ) {
+    return {
+      type: UPDATE_ZIP,
+      payload: zip
     };
+};
 
-    export function updateLoanAmount( loanAmount ) {
-        return {
-        type: UPDATE_LOAN_AMOUNT,
-        payload: loanAmount
-        };
+export function updateLoanAmount( loanAmount ) {
+    return {
+      type: UPDATE_LOAN_AMOUNT,
+      payload: loanAmount
     };
+};
 
-    export function updateMonthlyMort( monthlyMort ) {
-        return {
-        type: UPDATE_MONTHLY_MORT,
-        payload: monthlyMort
-        };
+export function updateMonthlyMort( monthlyMort ) {
+    return {
+      type: UPDATE_MONTHLY_MORT,
+      payload: monthlyMort
     };
+};
 
-    export function updateDesiredRent( desiredRent ) {
-        return {
-        type: UPDATE_DESIRED_RENT,
-        payload: desiredRent
-        };
+export function updateDesiredRent( desiredRent ) {
+    return {
+      type: UPDATE_DESIRED_RENT,
+      payload: desiredRent
     };
 };
 
