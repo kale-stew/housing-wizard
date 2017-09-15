@@ -5,17 +5,17 @@ module.exports = {
     login: (req,res, next ) =>{
                 const {session}= req;
                 const {username,password} =req.body
-                const user= users.find(user =>
-                user.username === username && 
-                user.password === password );
-
+                req.app.get('db').userSignIn([username,password]).then((user)=>{
+                   user = user[0]
                 if(user){
-                    session.user.username=user.username;
-                    res.status(200).send(session.user);
+                        session.user.id = user.id;
+                        session.user.username = user.username;
+                        res.status(200).send(session.user);
+                         
                 }else{
-                    res.status(500).send('Please Register.');
-                }
-    },
+                         res.status(500).send('Please Register.');
+                        }    
+    })},
 
     register: (req,res,next)=>{
         const {session}= req;
@@ -38,5 +38,4 @@ module.exports = {
         session.destroy()
         res.status(200).send(req.session)
     },
-    
 }
