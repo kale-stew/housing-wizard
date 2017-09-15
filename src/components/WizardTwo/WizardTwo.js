@@ -14,12 +14,12 @@ class WizardTwo extends Component {
             <div className="wizard_container">
             <div className="header_container">
                 <div className="header_child">
-                    <div className="header_left_container">
+                    <div className="header_left-container">
                         <img src="icon.png" alt="logo"/>
                         <span className="houser-bold">Houser</span>
                         <span className="dashboard">Dashboard</span>
                     </div>
-                    <div className="header_right_container"></div>
+                    <div className="header_right-container"></div>
                 </div>
             </div>
             <div className="wizard_step_container">
@@ -38,13 +38,13 @@ class WizardTwo extends Component {
                 </div>
                 <div className="step_body-Container">
                     <div className="step2_input-container">
-                        <span className="" >Address</span>
+                        <span className="input-title" >Address</span>
                         <input type="text" onChange={ (e)=> this.props.updateAddress(e.target.value) }/>
-                        <span className="">City</span>
+                        <span className="input-titlei">City</span>
                         <input type="text" onChange={ (e)=> this.props.updateCity(e.target.value) }/>
-                        <span className="">State</span>
+                        <span className="input-title">State</span>
                         <input type="text" onChange={ (e)=> this.props.updateState(e.target.value) }/>
-                        <span className="">Zip</span>
+                        <span className="input-title">Zip</span>
                         <input type="text" onChange={ (e)=> this.props.updateZip(e.target.value) }/>
                     </div>
                     <Link to="/wizard/3">

@@ -38,11 +38,11 @@ class WizardOne extends Component {
                     </div>
                     <div className="step_body-Container">
                         <div className="step1_name-container">
-                            <span>Property Name</span>
+                            <span className="input-title">Property Name</span>
                             <input type="text" onChange={ (e)=> this.props.updatePropName(e.target.value) }/>
                         </div>
                         <div className="step1_descrip-container">
-                            <span>Description</span>
+                            <span className="input-title">Description</span>
                             <textarea type="text" onChange={ (e)=> this.props.updateDescription(e.target.value) }></textarea>
                         </div>
                         <Link to="/wizard/2">
