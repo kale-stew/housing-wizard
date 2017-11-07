@@ -37,12 +37,12 @@ class WizardFour extends Component {
                     </div>
                 </div>
                 <div className="step_body-Container">
-                    <div>
+                    <div className="step2_input-container">
                         <span>Desired Rent</span>
-                        <input type="text" onChange={ (e)=> this.props.updateDesiredRent(e.target.value) }/>
+                        <input type="text" style={{ marginTop: '15px' }} onChange={ (e)=> this.props.updateDesiredRent(e.target.value) }/>
                     </div>
                     <Link to="/dashboard">
-                        <button className="next-step_btn">Finish Listing</button>
+                        <button className="next-step_btn" style={{ marginTop: '15px' }}>Finish Listing</button>
                     </Link>
                 </div>
             </div>

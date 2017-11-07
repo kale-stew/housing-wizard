@@ -49,7 +49,7 @@ class WizardTwo extends Component {
                         <input type="text" onChange={ (e)=> this.props.updateZip(e.target.value) }/>
                     </div>
                     <Link to="/wizard/3">
-                        <button className="next-step_btn"> Next</button>
+                        <button className="next-step_btn" style={{ marginTop: '15px' }}> Next</button>
                     </Link>
                 </div>
             </div>

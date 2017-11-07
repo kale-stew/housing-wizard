@@ -38,16 +38,16 @@ class WizardThree extends Component {
                     </div>
                 </div>
                 <div className="step_body-Container">
-                    <div>
+                    <div className="step2_input-container">
                         <span>Loan Amount</span>
                         <input type="text" onChange={ (e)=> this.props.updateLoanAmount(e.target.value) }/>
                     </div>
-                    <div>
+                    <div className="step2_input-container" style={{ marginTop: '15px' }}>
                         <span>Monthly Mortgage</span>
                         <input type="text" onChange={ (e)=> this.props.updateMonthlyMort(e.target.value) }/>
                     </div>
                     <Link to="/wizard/4">
-                        <button className="next-step_btn" style={{ padding: '30px' }}> Next</button>
+                        <button className="next-step_btn" style={{ marginTop: '15px' }}> Next</button>
                     </Link>
                 </div>
             </div>

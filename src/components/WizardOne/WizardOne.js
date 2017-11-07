@@ -39,16 +39,16 @@ class WizardOne extends Component {
                         </div>
                     </div>
                     <div className="step_body-Container">
-                        <div className="step1_name-container">
+                        <div className="step2_input-container">
                             <span className="input-title">Property Name</span>
                             <input type="text" onChange={ (e)=> this.props.updatePropName(e.target.value) }/>
                         </div>
-                        <div className="step1_descrip-container">
+                        <div className="step2_input-container" style={{ marginTop: '15px' }}>
                             <span className="input-title">Description</span>
                             <textarea type="text" onChange={ (e)=> this.props.updateDescription(e.target.value) }></textarea>
                         </div>
                         <Link to="/wizard/2">
-                            <button className="next-step_btn"> Next</button>
+                            <button className="next-step_btn" style={{ marginTop: '15px' }}> Next</button>
                         </Link>
                     </div>
                 </div>
