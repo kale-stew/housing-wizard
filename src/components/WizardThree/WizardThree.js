@@ -47,7 +47,7 @@ class WizardThree extends Component {
                         <input type="text" onChange={ (e)=> this.props.updateMonthlyMort(e.target.value) }/>
                     </div>
                     <Link to="/wizard/4">
-                        <button className="next-step_btn"> Next</button>
+                        <button className="next-step_btn" style={{ padding: '30px' }}> Next</button>
                     </Link>
                 </div>
             </div>

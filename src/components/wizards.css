@@ -36,14 +36,38 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(214, 236, 224);
-    width: 60%;
+    width: 50%;
     align-self: center;
     height: 700px;
 }
 
 .wizard_subheader-container {
     height: 30px;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.wizard_stepHighlight-container {
+    font-size: 20px;
+}
+
+.highlight-container {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    margin: 15px 0px 15px 0px;
+}
+
+.step_body-Container {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.step2_input-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-self: center;
 }
