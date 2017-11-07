@@ -16,7 +16,7 @@ class WizardThree extends Component {
             <div className="header_container">
                 <div className="header_child">
                     <div className="header_left_container">
-                        <img src="icon.png" alt="logo"/>
+                        <img className="house-icon" src="icon.png" alt="logo"/>
                         <span className="houser-bold">Houser</span>
                         <span className="dashboard">Dashboard</span>
                     </div>
@@ -24,7 +24,7 @@ class WizardThree extends Component {
                 </div>
             </div>
             <div className="wizard_step_container">
-                <div className="wiard_subheader-container">
+                <div className="wizard_subheader-container">
                     <span>Add New Listing</span>
                     <button>Cancel</button>
                 </div>

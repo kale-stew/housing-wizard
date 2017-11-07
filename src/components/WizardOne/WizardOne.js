@@ -16,16 +16,17 @@ class WizardOne extends Component {
                 <div className="header_container">
                     <div className="header_child">
                         <div className="header_left_container">
-                            <img src="icon.png" alt="logo"/>
+                            <img className="house-icon" src="icon.png" alt="logo"/>
                             <span className="houser-bold">Houser</span>
                             <span className="dashboard">Dashboard</span>
                         </div>
-                        <div className="header_right_container"></div>
+                        <div className="header_right_container">
+                        </div>
                     </div>
                 </div>
                 <div className="wizard_step_container">
-                    <div className="wiard_subheader-container">
-                        <span>Add New Listing</span>
+                    <div className="wizard_subheader-container">
+                        <span style={{ alignSelf: 'center' }}>Add New Listing</span>
                         <button>Cancel</button>
                     </div>
                     <div className="wizard_stepHighlight-container">
