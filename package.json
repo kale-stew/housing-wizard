@@ -3,14 +3,45 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "massive": "^4.0.1",
+=======
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "express-sessions": "^1.0.6",
+>>>>>>> 9f851c1f210b831ec40f9486f4de4c7936d654b9
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.13"
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.13",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+<<<<<<< HEAD
+  },
+  "description": "## simulation #2",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kale-stew/this-is-all-a-simulation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kale-stew/this-is-all-a-simulation/issues"
+  },
+  "homepage": "https://github.com/kale-stew/this-is-all-a-simulation#readme",
+  "devDependencies": {}
+=======
   }
+>>>>>>> 9f851c1f210b831ec40f9486f4de4c7936d654b9
 }
