@@ -1,3 +1,13 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.Link {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
 }

@@ -1,0 +1,50 @@
+.header_container {
+    height: 70px;
+    display: flex;
+    background-color: #519872;
+}
+
+.header_child {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.items-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.house-icon {
+    height: 34px;
+    width: 34px;
+}
+
+.houser-bold {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px 7px 0px 20px;
+    color: white;
+}
+
+.dashboard {
+    font-size: 30px;
+    color: white;
+    padding-top: 10px;
+}
+
+.logout-btn {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    height: 30px;
+    width: 70px;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 15px 18px 0px 0px;
+}

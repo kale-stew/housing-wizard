@@ -1,0 +1,19 @@
+.dashboard-container {
+    height: 100%;
+    background-color: #AFD4C0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 250, 240);
+    width: 60%;
+    align-self: center;
+    height: 700px;
+}
+
+.add-new_btn {
+    margin-top: 20px;
+}
