@@ -1,15 +1,15 @@
-// loan amount obtained
-// monthly mortgage being paid 
+// desired rent paid by a tenant
 
 import React, { Component } from 'react';
-import { updateLoanAmount, updateMonthlyMort } from '../../ducks/reducer';
+import { updateDesiredRent } from '../ducks/reducer';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import '../wizards.css';
+import './styles/wizards.css';
 
-class WizardThree extends Component {
+class WizardFour extends Component {
     render() {
-        const { updateLoanAmount, updateMonthlyMort } = this.props;
+        const { updateDesiredRent } = this.props;
+        const { cancelButton, inputHeader, finishButton} = styles;
 
         return(
             <div className="wizard_container">
@@ -25,43 +25,59 @@ class WizardThree extends Component {
             </div>
             <div className="wizard_step_container">
                 <div className="wizard_subheader-container">
-                    <span>Add New Listing</span>
-                    <button>Cancel</button>
+                    <h3>Add New Listing</h3>
+                    <button style={cancelButton}>Cancel</button>
                 </div>
                 <div className="wizard_stepHighlight-container">
-                    <span>Step 3</span>
+                    <span style={inputHeader}>Step 4</span>
                     <div className="highlight-container">
                         <img src="active.png" alt="step one"/>
                         <img src="active.png" alt="step two"/>
                         <img src="active.png" alt="step three"/>
-                        <img src="inactive.png" alt="inactive"/>
+                        <img src="active.png" alt="final step"/>
                     </div>
                 </div>
                 <div className="step_body-Container">
                     <div className="step2_input-container">
-                        <span>Loan Amount</span>
-                        <input type="text" onChange={ (e)=> this.props.updateLoanAmount(e.target.value) }/>
+                        <h4 style={inputHeader}>Desired Rent</h4>
+                        <input type="text" onChange={ (e)=> this.props.updateDesiredRent(e.target.value) }/>
                     </div>
-                    <div className="step2_input-container" style={{ marginTop: '15px' }}>
-                        <span>Monthly Mortgage</span>
-                        <input type="text" onChange={ (e)=> this.props.updateMonthlyMort(e.target.value) }/>
-                    </div>
-                    <Link to="/wizard/4">
-                        <button className="next-step_btn" style={{ marginTop: '15px' }}> Next</button>
+                    <Link to="/dashboard">
+                        <button className="next-step_btn" style={finishButton}>Finish Listing</button>
                     </Link>
                 </div>
             </div>
         </div>
         )
     }
-};
+}
+
+const styles = {
+    cancelButton: {
+        backgroundColor: '#FEC2C2',
+        fontSize: '14px',
+        padding: '6px 10px 6px 10px'
+    },
+    
+    inputHeader: {
+        fontSize: '20px',
+        marginBottom: '6px'
+    },
+
+    finishButton: {
+        backgroundColor: '#3B5249',
+        color: 'white',
+        fontSize: '14px',
+        marginTop: '30px',
+        padding: '9px 19px 9px 19px'
+    }
+}
 
 function mapStateToProps(state) {
-    const { loanAmount, monthlyMort } = state;
+    const { desiredRent } = state;
     return {
-        loanAmount,
-        monthlyMort
+        desiredRent
     };
 }
 
-export default connect(mapStateToProps, { updateLoanAmount, updateMonthlyMort })(WizardThree); 
+export default connect(mapStateToProps, { updateDesiredRent })(WizardFour); 
