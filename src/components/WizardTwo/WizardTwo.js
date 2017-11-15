@@ -16,7 +16,7 @@ class WizardTwo extends Component {
             <div className="header_container">
                 <div className="header_child">
                     <div className="header_left-container">
-                        <img className="house-icon" src="icon.png" alt="logo"/>
+                        <img className="house-icon" src="logo.png" alt="logo"/>
                         <span className="houser-bold">Houser</span>
                         <span className="dashboard">Dashboard</span>
                     </div>

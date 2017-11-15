@@ -16,7 +16,7 @@ class WizardOne extends Component {
                 <div className="header_container">
                     <div className="header_child">
                         <div className="header_left_container">
-                            <img className="house-icon" src="icon.png" alt="logo"/>
+                            <img className="house-icon" src="logo.png" alt="icon"/>
                             <span className="houser-bold">Houser</span>
                             <span className="dashboard">Dashboard</span>
                         </div>

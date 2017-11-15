@@ -15,7 +15,7 @@ class WizardFour extends Component {
             <div className="header_container">
                 <div className="header_child">
                     <div className="header_left_container">
-                        <img className="house-icon" src="icon.png" alt="logo"/>
+                        <img className="house-icon" src="logo.png" alt="logo"/>
                         <span className="houser-bold">Houser</span>
                         <span className="dashboard">Dashboard</span>
                     </div>
@@ -39,7 +39,7 @@ class WizardFour extends Component {
                 <div className="step_body-Container">
                     <div className="step2_input-container">
                         <span>Desired Rent</span>
-                        <input type="text" style={{ marginTop: '15px' }} onChange={ (e)=> this.props.updateDesiredRent(e.target.value) }/>
+                        <input type="text" onChange={ (e)=> this.props.updateDesiredRent(e.target.value) }/>
                     </div>
                     <Link to="/dashboard">
                         <button className="next-step_btn" style={{ marginTop: '15px' }}>Finish Listing</button>
