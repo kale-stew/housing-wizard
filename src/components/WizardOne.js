@@ -1,6 +1,5 @@
-// input for name, description
-
 import React, { Component } from 'react';
+import { Header } from './Header';
 import { updatePropName, updateDescription } from '../ducks/reducer';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -14,6 +13,7 @@ class WizardOne extends Component {
 
         return(
             <div className="wizard_container">
+                <Header />
                 <div className="wizard_step_container">
                     <div className="wizard_subheader-container">
                         <h3>Add New Listing</h3>

@@ -1,8 +1,6 @@
-// display available properties
-// filter feature
-
 import React, { Component } from 'react';
 import './styles/Dashboard.css';
+import { Header } from './Header';
 import { Link } from 'react-router-dom';
 
 export default class Dashboard extends Component {
@@ -11,6 +9,7 @@ export default class Dashboard extends Component {
 
         return(
             <div className="dashboard-container">
+                <Header />
                 <div className="content-container">
                     <div className="add-new_btn">
                         <Link to="/wizard/1" style={buttonStyle}>Add New Property</Link>

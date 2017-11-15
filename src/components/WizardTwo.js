@@ -1,7 +1,5 @@
-// address input
-// street, city, state, zip
-
 import React, { Component } from 'react';
+import { Header } from './Header';
 import { 
     updateStreet, 
     updateCity, 
@@ -19,6 +17,7 @@ class WizardTwo extends Component {
 
         return(
             <div className="wizard_container">
+            <Header />
                 <div className="wizard_step_container">
                     <div className="wizard_subheader-container">
                         <h3>Add New Listing</h3>

@@ -1,6 +1,3 @@
-// auth page
-// login or register
-
 import React, { Component } from 'react';
 import './styles/Landing.css';
 import { Link } from 'react-router-dom';
