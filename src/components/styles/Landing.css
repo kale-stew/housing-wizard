@@ -1,0 +1,46 @@
+.landing-container {
+    width: 100%;
+    background-color: #AFD4C0;
+    display: flex;
+    justify-content: center;
+}
+
+.landing-content {
+    height: 90vh;
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login-btn {
+    text-decoration: none;
+    border-radius: 8px;
+    height: 20px;
+    width: 90px;
+    background-color: #8AEA92;
+    color: black;
+    font-weight: bold;
+    margin: 20px 10px 0px 10px;
+    padding: 10px;
+}
+
+.register-btn {
+    text-decoration: none;
+    border-radius: 8px;
+    height: 20px;
+    width: 90px;  
+    background-color: #3B5249;
+    color: white;
+    font-weight: bold;
+    margin: 20px 10px 0px 10px;  
+    padding: 10px;
+}
