@@ -10,6 +10,7 @@ This project was designed to replicate what we might receive on the job. There w
 - `express.static` is used to serve production-ready front-end files
 - auth middleware should be used to ensure a user is logged in
 - `express sessions` should be used to track logged in users
+- `redux` is used to map state across the wizard and internal views
 
 ## Technical Requirements
 - As a user, I can login to my or register a new account.
@@ -22,3 +23,15 @@ This project was designed to replicate what we might receive on the job. There w
 - As a user of the wizard, my input should be remembered across all steps.
 - As a user of the wizard, I should be able to logout at any stage.
 - As a user of the wizard, I should be able to successfully manipulate properties in the database.
+
+## Current Status
+
+Complete | Pending
+-------- | -------
+store | redux
+component structure | auth middleware
+CSS | |
+router | |
+
+![current](https://github.com/kale-stew/housing-wizard/blob/master/assets/current.gif)
+
