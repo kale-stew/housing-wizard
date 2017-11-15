@@ -10,7 +10,7 @@ class WizardOne extends Component {
     render() {
         console.log(this)
         const { updatePropName, updateDescription } = this.props;
-        const { cancelButton, inputHeader, singleLineInput, nextButton } = styles;
+        const { cancelButton, inputHeader, nextButton } = styles;
 
         return(
             <div className="wizard_container">
@@ -30,11 +30,11 @@ class WizardOne extends Component {
                     </div>
                     <div className="step_body-Container">
                         <div className="input-container">
-                            <h4 className="input-title" style={inputHeader}>Property Name</h4>
-                            <input style={singleLineInput} type="text" onChange={ (e)=> this.props.updatePropName(e.target.value) }/>
+                            <h4 style={inputHeader}>Property Name</h4>
+                            <input type="text" onChange={ (e)=> this.props.updatePropName(e.target.value) }/>
                         </div>
                         <div className="input-container" style={{ marginTop: '15px' }}>
-                            <h4 className="input-title" style={inputHeader}>Description</h4>
+                            <h4 style={inputHeader}>Description</h4>
                             <textarea type="text" onChange={ (e)=> this.props.updateDescription(e.target.value) }></textarea>
                         </div>
                         <Link to="/wizard/2">

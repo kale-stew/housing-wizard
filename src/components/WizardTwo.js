@@ -35,13 +35,13 @@ class WizardTwo extends Component {
                     </div>
                     <div className="step_body-Container">
                         <div className="input-container">
-                            <h4 className="input-title" style={inputHeader}>Address</h4>
+                            <h4 style={inputHeader}>Address</h4>
                             <input type="text" onChange={ (e)=> this.props.updateAddress(e.target.value) }/>
-                            <h4 className="input-title" style={inputHeader}>City</h4>
+                            <h4 style={inputHeader}>City</h4>
                             <input type="text" onChange={ (e)=> this.props.updateCity(e.target.value) }/>
-                            <h4 className="input-title" style={inputHeader}>State</h4>
+                            <h4 style={inputHeader}>State</h4>
                             <input type="text" onChange={ (e)=> this.props.updateState(e.target.value) }/>
-                            <h4 className="input-title" style={inputHeader}>Zip</h4>
+                            <h4 style={inputHeader}>Zip</h4>
                             <input type="text" onChange={ (e)=> this.props.updateZip(e.target.value) }/>
                         </div>
                         <Link to="/wizard/3">
