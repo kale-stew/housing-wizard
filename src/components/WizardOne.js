@@ -10,19 +10,10 @@ class WizardOne extends Component {
     render() {
         console.log(this)
         const { updatePropName, updateDescription } = this.props;
-        const { cancelButton, inputHeader, nextButton} = styles;
+        const { cancelButton, inputHeader, singleLineInput, nextButton } = styles;
 
         return(
             <div className="wizard_container">
-                <div className="header_container">
-                    <div className="header_child">
-                        <div className="items-container">
-                            <img className="house-icon" src="logo.png" alt="icon"/>
-                            <span className="houser-bold">Houser</span>
-                            <span className="dashboard">Dashboard</span>
-                        </div>
-                    </div>
-                </div>
                 <div className="wizard_step_container">
                     <div className="wizard_subheader-container">
                         <h3>Add New Listing</h3>
@@ -38,16 +29,16 @@ class WizardOne extends Component {
                         </div>
                     </div>
                     <div className="step_body-Container">
-                        <div className="step2_input-container">
+                        <div className="input-container">
                             <h4 className="input-title" style={inputHeader}>Property Name</h4>
-                            <input type="text" onChange={ (e)=> this.props.updatePropName(e.target.value) }/>
+                            <input style={singleLineInput} type="text" onChange={ (e)=> this.props.updatePropName(e.target.value) }/>
                         </div>
-                        <div className="step2_input-container" style={{ marginTop: '15px' }}>
+                        <div className="input-container" style={{ marginTop: '15px' }}>
                             <h4 className="input-title" style={inputHeader}>Description</h4>
                             <textarea type="text" onChange={ (e)=> this.props.updateDescription(e.target.value) }></textarea>
                         </div>
                         <Link to="/wizard/2">
-                            <button className="next-step_btn" style={nextButton}> Next</button>
+                            <button className="next-step_btn" style={nextButton}> Next Step </button>
                         </Link>
                     </div>
                 </div>
@@ -59,7 +50,9 @@ class WizardOne extends Component {
 const styles = {
     cancelButton: {
         backgroundColor: '#FEC2C2',
-        fontSize: '14px',
+        fontSize: '16px',
+        fontWeight: 'bold',
+        border: 'none',
         padding: '6px 10px 6px 10px'
     },
     
@@ -71,9 +64,10 @@ const styles = {
     nextButton: {
         backgroundColor: '#3B5249',
         color: 'white',
-        fontSize: '14px',
+        border: 'none',
+        fontSize: '15px',
         marginTop: '30px',
-        padding: '9px 19px 9px 19px'
+        padding: '9px 18px 9px 18px'
     }
 }
 

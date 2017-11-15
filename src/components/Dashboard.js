@@ -2,25 +2,32 @@
 // filter feature
 
 import React, { Component } from 'react';
+import './styles/Dashboard.css';
 import { Link } from 'react-router-dom';
 
 export default class Dashboard extends Component {
     render() {
+        const { buttonStyle } = styles;
+
         return(
-            <div className="header_container">
-                <div className="header_child">
-                    <div className="header_left_container">
-                        <img src="icon.png" alt="logo"/>
-                        <span className="houser-bold">Houser</span>
-                        <span className="dashboard">Dashboard</span>
-                    </div>
-                    <div className="header_right_container">
-                        <Link to exact="/">
-                            <button className="register-btn">Logout</button>
-                        </Link>
+            <div className="dashboard-container">
+                <div className="content-container">
+                    <div className="add-new_btn">
+                        <Link to="/wizard/1" style={buttonStyle}>Add New Property</Link>
                     </div>
                 </div>
             </div>
         )
+    }
+}
+
+const styles = {
+    buttonStyle: {
+        backgroundColor: '#8AEA92',
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: '18px',
+        padding: '10px 15px 10px 15px',
+        textDecoration: 'none'
     }
 }

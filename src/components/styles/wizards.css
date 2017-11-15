@@ -1,50 +1,27 @@
+input {
+    font-size: 16px;
+    border: 1px solid green;
+    border-radius: 5px;
+    height: 18px;
+    padding: 5px 12px 5px 12px;
+}
+
+textarea {
+    border: 1px solid green;
+    border-radius: 5px;
+    height: 100px;
+}
+
 .wizard_container {
     background-color: #AFD4C0;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.header_container {
-    height: 55px;
-    display: flex;
-    flex-direction: row;
-    background-color: #519872;
-    width: 100%;
-}
-
-.items-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: 55%;
-}
-
-.house-icon {
-    padding: 10px 0px 8px 18px;
-    height: 34px;
-    width: 34px;
-    justify-content: flex-start;
-}
-
-.houser-bold {
-    font-weight: bold;
-    font-size: 30px;
-    padding: 10px 7px 0px 20px;
-    color: white;
-}
-
-.dashboard {
-    font-size: 30px;
-    color: white;
-    padding-top: 10px;
 }
 
 .wizard_step_container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(226, 236, 231);
+    background-color: rgb(235, 250, 240);
     width: 60%;
     align-self: center;
     height: 700px;
@@ -68,18 +45,19 @@
 .highlight-container {
     display: flex;
     justify-content: space-around;
-    margin: 15px 0px 15px 0px;
+    margin: 15px 0px 0px 0px;
 }
 
 .step_body-Container {
     padding: 25px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.step2_input-container {
+.input-container {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    align-self: center;
+    width: 460px;
 }
