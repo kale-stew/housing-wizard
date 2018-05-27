@@ -6,7 +6,6 @@
     "body-parser": "^1.18.1",
     "cors": "^2.8.4",
     "express": "^4.15.4",
-    "express-sessions": "^1.0.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
